@@ -1,0 +1,22 @@
+<h2 id="api-data-helloworld"></h2>
+
+<script>
+    require(['jquery', 'mage/url'], function($, url) {
+        $(document).ready(function() {
+            url.setBaseUrl(BASE_URL);
+            let postHelloWorldUrl = url.build('rest/V1/magento2-helloworld/post');
+
+            $.ajax({
+                url: postHelloWorldUrl,
+                type: 'POST',
+                success: function(response) {
+                    let responseData = JSON.parse(response)
+                    $('#api-data-helloworld').html(responseData.message.display_text);
+                },
+                error: function(xhr, status, error) {
+                    console.error(error);
+                }
+            });
+        });
+    });
+</script>

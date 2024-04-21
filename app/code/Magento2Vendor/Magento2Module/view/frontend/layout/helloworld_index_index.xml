@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Magento2Vendor_Magento2Module::js/HelloWorldEndpoint.js"/>
+    </head>
+    <referenceContainer name="content">
+        <block class="Magento2Vendor\Magento2Module\Block\Index" name="helloworld_index_index" template="Magento2Vendor_Magento2Module::index.phtml" />
+    </referenceContainer>
+</page>
